@@ -10,7 +10,7 @@ public class ForTest {
         for (int i = 0; i < 10; i++) {
             if (i == 5) {
 //                break; //
-                continue;
+                continue; //continue 跳出当前这一次循环 执行下一次循环
             }
             System.out.println(i);
         }

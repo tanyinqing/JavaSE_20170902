@@ -11,6 +11,7 @@ public class BreakTest {
         for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 if (j == 5) {
+//                    break 跳出当前这一个循环
                     break test;
                 }
                 System.out.print(i * j + "\t");
