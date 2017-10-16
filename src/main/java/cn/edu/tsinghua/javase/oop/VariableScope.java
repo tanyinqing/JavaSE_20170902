@@ -1,4 +1,4 @@
-package cn.edu.tsinghua.javase.ceshi2;
+package cn.edu.tsinghua.javase.oop;
 
 /**
  * @author mingfei.net@gmail.com
@@ -7,7 +7,9 @@ package cn.edu.tsinghua.javase.ceshi2;
  */
 public class VariableScope {
 
-
+    /**
+     *
+     */
     public void m() {
         i = 0;
         test(1d);

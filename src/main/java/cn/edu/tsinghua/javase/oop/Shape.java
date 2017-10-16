@@ -1,4 +1,4 @@
-package cn.edu.tsinghua.javase.ceshi2;
+package cn.edu.tsinghua.javase.oop;
 /**
  * @author mingfei.net@gmail.com
  * @link https://github.com/thu/JavaSE_20170902/

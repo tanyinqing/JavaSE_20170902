@@ -1,4 +1,4 @@
-package cn.edu.tsinghua.javase.ceshi2;
+package cn.edu.tsinghua.javase.oop;
 /**
  * @author mingfei.net@gmail.com
  * @link https://github.com/thu/JavaSE_20170902/
@@ -36,7 +36,7 @@ interface D {
     void d();
 }
 
-
+//一个类实现了多个接口 就实现多个接口里的方法
 class AbcdImpl implements A, B, C, D {
     @Override
     public void a() {
@@ -63,6 +63,7 @@ interface E extends A, B, C, D {
     void e();
 }
 
+//接口也可以实现接口
 class EImpl implements E {
     @Override
     public void a() {

@@ -1,4 +1,4 @@
-package cn.edu.tsinghua.javase.ceshi2;
+package cn.edu.tsinghua.javase.oop;
 
 public class staticTest {
     private static int i;
