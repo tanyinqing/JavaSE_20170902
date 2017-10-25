@@ -18,7 +18,7 @@ public class Test extends AccessModifierTest {
 //    public static void main(String[] args) {
 //
 //        // FQN Fully Qualified Name 全限定名
-//        cn.edu.tsinghua.javase.oop.Test test = new cn.edu.tsinghua.javase.oop.Test();
+//        cn.edu.tsinghua.javase.oop.InputStreamTest test = new cn.edu.tsinghua.javase.oop.InputStreamTest();
 //        test.test();
 //
 //        Asian asian = new Asian("");

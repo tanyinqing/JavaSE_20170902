@@ -45,7 +45,7 @@ public class Test {
 
 /*
 java.lang.ArithmeticException: / by zero
-	at cn.edu.tsinghua.javase.exception.Test.main(Test.java:26)
+	at cn.edu.tsinghua.javase.exception.InputStreamTest.main(InputStreamTest.java:26)
 Exception in thread "main" java.lang.ArithmeticException: / by zero
-	at cn.edu.tsinghua.javase.exception.Test.main(Test.java:26)
+	at cn.edu.tsinghua.javase.exception.InputStreamTest.main(InputStreamTest.java:26)
  */

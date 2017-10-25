@@ -10,7 +10,7 @@ import com.sun.xml.internal.bind.v2.runtime.output.SAXOutput;
 public class Test extends Object {
 
     public void test() {
-        System.out.println("oop Test class...");
+        System.out.println("oop InputStreamTest class...");
     }
 
     public static void main(String[] args) {
