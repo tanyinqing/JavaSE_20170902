@@ -6,15 +6,14 @@ import java.net.URL;
 
 public class DownloadImage {
     private static final String IMAGE_URL = "http://img.jandan.net/news/2017/09/cf114fae2a31b13bac5a13c5bce745df.jpg";
-
-    public static void main(String[] args) {
-//        java.net.URL
+    private static int counter;
+    public static void download(String imageUrl){
         try {
-            URL url = new URL(IMAGE_URL);
+            URL url = new URL(imageUrl);
 //            System.out.println(url.getFile());
             try (
                     BufferedInputStream inputStream = new BufferedInputStream(url.openStream());
-                    BufferedOutputStream outputStream = new BufferedOutputStream(new FileOutputStream("test.jpg"))
+                    BufferedOutputStream outputStream = new BufferedOutputStream(new FileOutputStream("D:/tan/tan"+ (++counter) + ".jpg"))
             ) {
 //                int i;
 //                while ((i = inputStream.read()) != -1) {
@@ -32,5 +31,9 @@ public class DownloadImage {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
+    }
+    public static void main(String[] args) {
+//        java.net.URL
+        download(IMAGE_URL);
     }
 }
