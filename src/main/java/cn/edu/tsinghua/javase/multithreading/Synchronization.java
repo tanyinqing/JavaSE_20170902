@@ -2,62 +2,83 @@ package cn.edu.tsinghua.javase.multithreading;
 
 public class Synchronization {
     public static void main(String[] args) {
-        Output output = new Output();
-        Library library = new Library(output);
-        University university = new University(output);
+        Food water = new Food("water");
+        //        Food fish = new Food("fish");
+        //        Food bone = new Food("bone");
 
-        library.start();
-        university.start();
+        Cat cat = new Cat("kitty", water);
+        Dog dog = new Dog("tiger", water);
+
+        cat.start();
+        dog.start();
     }
 }
 
-class Output {
-    public synchronized void print(String s) {
-        System.out.println(s);
+class Food {
+    private String name;
+
+    Food(String name) {
+        this.name = name;
+    }
+
+    synchronized void eat1() {
+        System.out.println(Thread.currentThread().getName() + " is eating " + name);
         try {
-            Thread.sleep(1000*5);
+            Thread.sleep(1000 * 5);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-    public void scan(String s) {
-        synchronized (s) {
+    void eat2() {
+        synchronized (this) {
+            System.out.println(Thread.currentThread().getName() + " is eating " + name);
             try {
-                s.wait(1000*5);
-                System.out.println("scan: " + s);
+                Thread.sleep(1000 * 5);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
     }
+
+    synchronized static void eat3() {
+        System.out.println(Thread.currentThread().getName() + " is eating...");
+        try {
+            Thread.sleep(1000 * 5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
-class Library extends Thread {
+class Cat extends Thread {
+    private Food food;
 
-    private Output output;
-
-    public Library(Output output) {
-        this.output = output;
+    Cat(String name, Food food) {
+        super(name);
+        this.food = food;
     }
 
     @Override
     public void run() {
-        output.print("library print...");
-//        output.scan("library print...");
+        food.eat1();
+//        food.eat2();
+//        food.eat3();
     }
 }
 
-class University extends Thread {
-    private Output output;
+class Dog extends Thread {
+    private Food food;
 
-    public University(Output output) {
-        this.output = output;
+    Dog(String name, Food food) {
+        super(name);
+        this.food = food;
     }
 
     @Override
     public void run() {
-        output.print("University print...");
-//        output.scan("University print...");
+        food.eat1();
+//        food.eat2();
+//        food.eat3();
     }
 }
