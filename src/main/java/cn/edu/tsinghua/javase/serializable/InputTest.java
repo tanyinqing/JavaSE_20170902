@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
-public class OutputTest1 {
+public class InputTest {
     public static void main(String[] args) {
         try (ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream("user.data"))) {
             User u = (User) objectInputStream.readObject();
